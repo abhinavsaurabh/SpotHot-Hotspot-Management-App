@@ -10,4 +10,4 @@ Some of implemented features:
 - [x] monitoring battery temperature and suspend tethering if limit exceeds
 - [x] stores up to 10 WiFi tethering settings and selects one as default
 
-This works best upto Android 9.
+All the features works best upto Android 9.
