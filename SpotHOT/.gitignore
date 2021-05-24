@@ -1,0 +1,26 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+fabric.properties
+/.idea
+target
+bin
+api.key
+
+*.iml
+
+# Package Files #
+*.class
+*.jar
+*.db
+*.hdb
+*.apk
+
+hs_err_pid*
+
+
+build/

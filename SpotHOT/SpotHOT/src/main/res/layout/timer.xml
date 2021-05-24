@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            tools:context="com.team10.mc.SpotHOT.com.team10.mc.SpotHOT.activity.ScheduleActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp">
+
+        <CheckBox
+                android:id="@+id/chkScheduleOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:labelFor="@+id/scheduleTimeOff"
+            android:text="@string/scheduled_turn_off"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <TimePicker
+                android:id="@+id/scheduleTimeOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"/>
+
+        <CheckBox
+                android:id="@+id/chkScheduleOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:labelFor="@+id/scheduleTimeOn"
+            android:text="@string/scheduled_turn_on"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <TimePicker
+                android:id="@+id/scheduleTimeOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/repeat_weekly_on"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:weightSum="7">
+
+            <ToggleButton
+                    android:id="@+id/btnMonday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                android:textOff="Mo"
+                android:textOn="Mo" />
+
+            <ToggleButton
+                    android:id="@+id/btnTuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                android:textOff="Tu"
+                android:textOn="Tu" />
+
+            <ToggleButton
+                    android:id="@+id/btnWednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                android:textOff="We"
+                android:textOn="We" />
+
+            <ToggleButton
+                    android:id="@+id/btnThursday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                android:textOff="Th"
+                android:textOn="Th" />
+
+            <ToggleButton
+                    android:id="@+id/btnFriday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                android:textOff="Fr"
+                android:textOn="Fr" />
+
+            <ToggleButton
+                    android:id="@+id/btnSaturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:textColor="@color/indicator"
+                android:textOff="Sa"
+                android:textOn="Sa" />
+
+            <ToggleButton
+                    android:id="@+id/btnSunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:textColor="@color/indicator"
+                android:textOff="Su"
+                android:textOn="Su" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+            <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cancel"/>
+
+            <Button
+                    android:id="@+id/btnOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/save"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

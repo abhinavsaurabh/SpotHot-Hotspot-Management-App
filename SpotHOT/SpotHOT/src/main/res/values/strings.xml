@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">SpotHOT</string>
+    <string name="activate.on.startup.summary">Activate the service on device startup</string>
+    <string name="activate.title">Activation</string>
+    <string name="ssid">SSID WiFi hotspot</string>
+
+
+    <string name="activateTethering.summary">Force to activate WiFi tethering after startup</string>
+    <string name="activateTethering.title">WiFi Tethering</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="startup.activity.screen.summary">Startup activity settings</string>
+    <string name="revert.to.default">Revert to default settings</string>
+    <string name="ssid.conf">HoTSPOT Configuration</string>
+
+    <string name="enter.value.minutes">Enter value in minutes</string>
+
+    <string name="turn.off.tethering.idle.title">WiFi Tethering</string>
+    <string name="turn.off.tethering.idle.summary">Turn off WiFi Tethering on idle</string>
+    <string name="activate.on.startup.title">Startup</string>
+    <string name="startup.title">Activate Hotspot</string>
+    <string name="scheduler.title">HotSpot Timeout</string>
+    <string name="idle.time.minutes">Idle time in minutes</string>
+    <string name="warning">Welcome</string>
+    <string name="advanced.settings">Advanced Settings</string>
+    <!-- PROMPTS -->
+    <string name="prompt.onexit">Do you want to exit and stop service?</string>
+    <string name="reset.prompt">Do you want to reset current settings?</string>
+    <string name="initial.prompt">By default connection to internet is turned off. You need to set
+        them manually.\nConnecting via packet data may incur additional charges.\n\nDo you want to turn on 3G connection tethering now?
+    </string>
+
+    <string name="notification.scheduled.tethering.off">Turned off HOTSPOT at scheduled time</string>
+
+    <string name="notification.idle.tethering.off">Turned off HOTSPOT due to clients inactivity</string>
+
+    <string name="notification.tethering.restored">Started HOTSPOT</string>
+    <string name="notification.tethering.off">Turned off HOTSPOT</string>
+
+    <string name="notification_scheduled_tethering_on">Turned on HOTSPOT at scheduled time</string>
+    <string name="service.started">Service started</string>
+
+    <string name="activate.keep.service.title">Service in background</string>
+    <string name="activate.keep.service.summary">Keep service running after start tethering</string>
+    <string name="turn_on_off_wifi_tethering">Turn on/off SpotHOT</string>
+
+    <string name="add_widget">ADD WIDGET</string>
+    <string name="version">A HotSpot Manager</string>
+    <string name="author">Team-10 Course Project</string>
+    <string name="author2">Course Instructor: Mukulika Maity </string>
+    <string name="scheduled_turn_off">Scheduled turn OFF</string>
+    <string name="scheduled_turn_on">Scheduled turn ON</string>
+    <string name="repeat_weekly_on">Repeat weekly on:</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="donot_remind">Don\'t Remind</string>
+    <string name="on_startup_disable">Startup application has been disabled. Service won\'t startup on system boot.
+    </string>
+    <string name="on_startup_enable">Startup application on boot has been enabled</string>
+    <string name="about">About</string>
+    <string name="reset_settings">Reset settings</string>
+    <string name="exit">Exit</string>
+    <string name="tap_to_turn_on_tethering">Tap to turn on HOTSPOT</string>
+    <string name="tap_to_turn_off_tethering">Tap to turn off HOTSPOT</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="title">Title</string>
+    <string name="summary">Summary</string>
+
+    <!-- RELEASE NOTES -->
+
+    <string name="notification_data_exceed_limit">Data usage exceed the limit</string>
+
+    <string name="usb.activate.onconnect.unselect">Once option \'Start service on power connection\' has been disabled options below settings won\'t work unless service is running</string>
+    <string name="cannot_load_wifihotspot">Cannot load system WiFi hotspot configuration!</string>
+    <string name="close">Close</string>
+
+    <string name="initial_prompt_lollipop">Welcome to SPOTHOT </string>
+
+
+
+</resources>

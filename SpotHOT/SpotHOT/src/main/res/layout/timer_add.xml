@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@android:id/widget_frame"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="4dp"
+              android:baselineAligned="false">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+        <ImageButton
+                android:id="@+id/btnToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_toggle"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/middleLayout"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+        <TextView
+                android:id="@android:id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textSize="26sp"/>
+
+        <TextView
+                android:id="@android:id/summary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/summary"
+                android:textSize="13sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+    >
+        <ImageButton
+                android:id="@+id/btnScheduleDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_remove"/>
+    </LinearLayout>
+</LinearLayout>

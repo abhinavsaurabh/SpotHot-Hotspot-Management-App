@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      tools:context=".MainActivity">
+
+    <item
+            android:id="@+id/action_info"
+            android:title="@string/about"
+            app:showAsAction="never" />
+
+
+    <item
+            android:id="@+id/action_reset"
+            android:title="@string/reset_settings"
+            app:showAsAction="never" />
+    <item
+            android:id="@+id/action_exit"
+            android:title="@string/exit"
+            app:showAsAction="never" />
+</menu>

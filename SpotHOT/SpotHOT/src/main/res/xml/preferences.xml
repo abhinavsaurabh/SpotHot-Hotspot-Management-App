@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/app_name">
+
+    <PreferenceScreen
+        android:icon="@drawable/ic_startup"
+        android:key="startup.screen"
+        android:title= "@string/startup.title">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_startup"
+            android:key="activate.on.startup"
+            android:summary="@string/activate.on.startup.summary"
+            android:title="@string/activate.on.startup.title" />
+        <EditTextPreference
+            android:defaultValue="0"
+            android:dependency="activate.on.startup"
+            android:dialogTitle="Enter value in seconds:"
+            android:icon="@drawable/ic_clock"
+            android:inputType="number"
+            android:key="activate.on.startup.delay"
+            android:maxLength="3"
+            android:summary=""
+            android:title="Delay after startup [s]" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_service"
+            android:key="activate.keep.service"
+            android:summary="@string/activate.keep.service.summary"
+            android:title="@string/activate.keep.service.title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_wifi"
+            android:key="activate.tethering"
+            android:summary="@string/activateTethering.summary"
+            android:title="@string/activateTethering.title" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/ic_activation"
+        android:key="source.activation"
+        android:title="Customize Hotspot">
+
+        <PreferenceCategory android:title="General settings">
+            <PreferenceScreen
+                android:icon="@drawable/ic_clock"
+                android:key="scheduler.screen"
+                android:summary="Manage tethering with scheduler"
+                android:title="@string/scheduler.title">
+                <PreferenceScreen
+                    android:icon="@drawable/ic_add"
+                    android:key="scheduler.add"
+                    android:title="Add schedule" />
+                <PreferenceCategory
+                    android:key="scheduled.shutdown.list"
+                    android:title="Scheduled tethering deactivation" />
+            </PreferenceScreen>
+
+            <PreferenceScreen
+                android:icon="@drawable/ic_usb"
+                android:summary="Deactivate Hotspot below certain battery level"
+                android:title="Battery Level">
+
+                <CheckBoxPreference
+                    android:icon="@drawable/ic_battery_level"
+                    android:key="usb.off.battery.lvl"
+                    android:summary="Stop tethering when battery is below the level"
+                    android:title="Battery level" />
+                <EditTextPreference
+                    android:defaultValue="15"
+                    android:dependency="usb.off.battery.lvl"
+                    android:dialogTitle="Enter percentage value from range 1-100"
+                    android:icon="@drawable/ic_battery_dead"
+                    android:inputType="number"
+                    android:key="usb.off.battery.lvl.value"
+                    android:summary=""
+                    android:title="Battery level limit in %" />
+            </PreferenceScreen>
+
+
+
+        </PreferenceCategory>
+
+
+
+        <PreferenceCategory android:title="When tethering is deactivated">
+            <PreferenceScreen
+                android:icon="@drawable/ic_sleep"
+                android:key="idle.screen"
+                android:summary="Turn off tethering when no device is connected"
+                android:title="Deactivate on idle">
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:icon="@drawable/ic_wifi"
+                    android:key="idle.wifi.off"
+                    android:summary="@string/turn.off.tethering.idle.summary"
+                    android:title="@string/turn.off.tethering.idle.title" />
+                <EditTextPreference
+                    android:defaultValue="60"
+                    android:dependency="idle.wifi.off"
+                    android:dialogTitle="@string/enter.value.minutes"
+                    android:icon="@drawable/ic_clock"
+                    android:inputType="number"
+                    android:key="idle.wifi.off.time"
+                    android:maxLength="5"
+                    android:summary=""
+                    android:title="@string/idle.time.minutes" />
+
+                <PreferenceScreen
+                    android:icon="@drawable/ic_clients"
+                    android:key="idle.connected.clients"
+                    android:summary="Tap to refresh"
+                    android:title="Connected clients: 0" />
+            </PreferenceScreen>
+
+            <PreferenceScreen
+                android:icon="@drawable/ic_stats"
+                android:key="data.limit"
+                android:summary="Helps to control data usage on tethering"
+                android:title="Data Usage ">
+                <CheckBoxPreference
+                    android:key="data.limit.on"
+                    android:summary="Turn off Hotspot once data usage exceed the limit"
+                    android:title="Data usage limit on" />
+                <EditTextPreference
+                    android:defaultValue="1000"
+                    android:dependency="data.limit.on"
+                    android:inputType="number"
+                    android:key="data.limit.value"
+                    android:maxLength="6"
+                    android:title="Data usage limit [MB]" />
+                <PreferenceScreen
+                    android:key="data.limit.counter"
+                    android:summary="n/a"
+                    android:title="Data usage counter" />
+                <PreferenceCategory android:title="Reset counter">
+                    <PreferenceScreen
+                        android:icon="@drawable/ic_trash"
+                        android:key="data.limit.reset"
+                        android:title="Reset data usage counter" />
+                    <CheckBoxPreference
+                        android:key="data.limit.daily.reset"
+                        android:summary="Reset counter just after the midnight every day"
+                        android:title="Reset counter every day" />
+                    <CheckBoxPreference
+                        android:key="data.limit.startup.reset"
+                        android:summary="Reset counter on every application startup"
+                        android:title="Reset counter on startup" />
+                </PreferenceCategory>
+            </PreferenceScreen>
+
+
+        </PreferenceCategory>
+
+    </PreferenceScreen>
+
+
+
+    <PreferenceCategory
+        android:icon="@drawable/ic_wifi"
+        android:title="@string/ssid.conf">
+        <PreferenceScreen
+            android:icon="@drawable/ic_wifi"
+            android:key="ssid.screen"
+            android:title="@string/ssid.conf">
+            <PreferenceScreen
+                android:icon="@drawable/ic_wifi"
+                android:key="ssid"
+                android:summary=""
+                android:title="@string/ssid">
+                <intent
+                    android:targetClass="com.android.settings.TetherSettings"
+                    android:targetPackage="com.android.settings" />
+            </PreferenceScreen>
+            <PreferenceCategory
+                android:key="wifi.list"
+                android:title="Portable Wi-Fi hotspot list">
+                <PreferenceScreen
+                    android:icon="@drawable/ic_add"
+                    android:key="wifi.add.device"
+                    android:title="Add WiFi hotspot" />
+                <PreferenceScreen
+                    android:icon="@drawable/ic_edit"
+                    android:key="wifi.modify.device"
+                    android:title="Modify WiFi hotspot" />
+                <PreferenceScreen
+                    android:icon="@drawable/ic_remove"
+                    android:key="wifi.remove.device"
+                    android:title="Remove selected" />
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

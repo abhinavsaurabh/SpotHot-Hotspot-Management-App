@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      tools:context=".MainActivity">
+
+    <item
+            android:icon="@drawable/ic_menu"
+            android:showAsAction="ifRoom|withText"
+            android:title="">
+
+        <menu>
+            <item
+                    android:id="@+id/action_info"
+                    android:icon="@drawable/ic_info"
+                    android:showAsAction="never"
+                    android:title="@string/about"/>
+
+            <item
+                    android:id="@+id/action_reset"
+                    android:icon="@drawable/ic_cancel"
+                    android:showAsAction="never"
+                    android:title="@string/reset_settings"/>
+            <item
+                    android:id="@+id/action_exit"
+                    android:icon="@drawable/ic_exit"
+                    android:showAsAction="never"
+                    android:title="@string/exit"/>
+        </menu>
+    </item>
+</menu>
